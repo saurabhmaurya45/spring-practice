@@ -12,6 +12,7 @@
         http://www.springframework.org/schema/util 
         http://www.springframework.org/schema/util/spring-util.xsd">
       
+      <!--  value as an element -->
       <!-- this is our first bean -->
      <bean class="com.springcore.Student" name="student1">
      	<property name="studentId">
@@ -25,5 +26,19 @@
      	</property>
      </bean>
      
+     <!-- value as an attribute -->
+     <bean class="com.springcore.Student" name="student2">
+     	<property name="studentId" value = "2" />
+     		
+     	<property name="studentName" value = "attrubute:Saurabh Maurya" />
+     		
+     	<property name="studentAddress" value = "Lucknow"/>
+     		
+     </bean>
+     
+     <!-- value as a p schema -->
+     <bean class="com.springcore.Student" name="student3" 
+     	p:studentId="3" p:studentName="p:saurabh" p:studentAddress = "Azamgarh"
+     />
         
 </beans>
