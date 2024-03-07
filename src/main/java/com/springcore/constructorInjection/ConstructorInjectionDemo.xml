@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:util="http://www.springframework.org/schema/util" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    	http://www.springframework.org/schema/beans/spring-beans.xsd
+     	http://www.springframework.org/schema/context
+     	http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util 
+        http://www.springframework.org/schema/util/spring-util.xsd">
+       
+   <bean class="com.springcore.constructorInjection.Address" name="address1" 
+   		c:village="Naka" c:city="Ayodhya" c:state="Uttar Pradesh" 
+   />
+   
+   <bean class="com.springcore.constructorInjection.Student" name="student1" >
+   		<constructor-arg>
+   			<value type="int">1234</value>
+   		</constructor-arg>
+   		
+   		<constructor-arg value = "saurabh"/>
+   		<constructor-arg ref="address1" />
+   		
+   		<constructor-arg>
+   			<list>
+   				<value>Java</value>
+   				<value>Python</value>
+   				<value>JavaScript</value>
+   			</list>
+   		</constructor-arg>
+   		<constructor-arg>
+   			<map>
+   				<entry key="java" value="3 months" />
+   				<entry key="python" value="2 months"/>
+   				<entry key="javaScript" value="3 months" />
+   			</map>
+   		</constructor-arg>
+   		
+   		<constructor-arg>
+   			<props>
+   				<prop key="username">saurabh</prop>
+   				<prop key="host">localhost</prop>
+   			</props>
+   		</constructor-arg>
+   	</bean>
+</beans>
