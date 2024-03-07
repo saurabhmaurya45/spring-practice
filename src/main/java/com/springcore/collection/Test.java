@@ -15,7 +15,7 @@ public class Test {
 		System.out.println(emp1);
 		Properties pr = (Properties)emp1.getProps();
 		System.out.println(pr.getProperty("host"));
-		
+		 
 	}
 
 }
