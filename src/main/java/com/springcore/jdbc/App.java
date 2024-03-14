@@ -31,9 +31,12 @@ public class App {
 //		System.out.println("Data updates.."+ result);
 		
 		//deleting student
-		int result = studentDao.delete(4);
-		System.out.println("Data deleted.."+ result);
+//		int result = studentDao.delete(4);
+//		System.out.println("Data deleted.."+ result);
 		
+		// getting single student object
+		Student singleStudent = studentDao.getSingleStudent(3);
+		System.out.println(singleStudent.toString());
 	}
 	
 }
