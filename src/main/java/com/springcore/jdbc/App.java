@@ -22,13 +22,17 @@ public class App {
 //		System.out.println("No of rows inserted.."+ result);
 		
 		//updating student
-		Student updateStudent = new Student();
-		updateStudent.setStudentId(2);
-		updateStudent.setStudentName("Abhay");
-		updateStudent.setAddress("Ayodhya");
+//		Student updateStudent = new Student();
+//		updateStudent.setStudentId(2);
+//		updateStudent.setStudentName("Abhay");
+//		updateStudent.setAddress("Ayodhya");
+//		
+//		int result = studentDao.update(updateStudent); 
+//		System.out.println("Data updates.."+ result);
 		
-		int result = studentDao.update(updateStudent); 
-		System.out.println("Data updates.."+ result);
+		//deleting student
+		int result = studentDao.delete(4);
+		System.out.println("Data deleted.."+ result);
 		
 	}
 	
