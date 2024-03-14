@@ -14,11 +14,21 @@ public class App {
 		ApplicationContext context = new  ClassPathXmlApplicationContext("com/springcore/jdbc/config.xml");
 		
 		StudentDao studentDao = context.getBean("studentDao", StudentDao.class);
-		Student s1= new Student();
-		s1.setStudentName("Srishti");
-		s1.setAddress("Azamgarh");
-		int result = studentDao.insert(s1);
-		System.out.println("No of rows inserted.."+ result);
+		//inserting new student
+//		Student s1= new Student();
+//		s1.setStudentName("Srishti");
+//		s1.setAddress("Azamgarh");
+//		int result = studentDao.insert(s1);
+//		System.out.println("No of rows inserted.."+ result);
+		
+		//updating student
+		Student updateStudent = new Student();
+		updateStudent.setStudentId(2);
+		updateStudent.setStudentName("Abhay");
+		updateStudent.setAddress("Ayodhya");
+		
+		int result = studentDao.update(updateStudent); 
+		System.out.println("Data updates.."+ result);
 		
 	}
 	
